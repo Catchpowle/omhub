@@ -1,5 +1,3 @@
-# One Month Rails
+# Omhub
 
-An application to find educational resources ordered through voting.
-
-by [Jonathan Catchpowle]
+An online community for One Month Rails students and alumni.
