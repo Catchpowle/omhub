@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :name, "Project Name" %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
@@ -22,7 +27,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :github, "GitHub Repository" %><br>
+    <%= f.label :github, "GitHub" %><br>
     <%= f.text_field :github %>
   </div>
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131026214423) do
+ActiveRecord::Schema.define(version: 20131026222210) do
 
   create_table "projects", force: true do |t|
     t.string   "description"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20131026214423) do
     t.integer  "user_id"
     t.string   "url"
     t.string   "github"
+    t.string   "name"
   end
 
   add_index "projects", ["user_id"], name: "index_projects_on_user_id"
