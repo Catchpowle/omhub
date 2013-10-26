@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
 	belongs_to :user
 
-	validates :description, presence: true
+	validates :description, :url, :github, presence: true
 
 end

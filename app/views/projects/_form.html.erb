@@ -13,8 +13,19 @@
 
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_area :description %>
   </div>
+
+  <div class="field">
+    <%= f.label :url, "Project URL" %><br>
+    <%= f.text_field :url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :github, "GitHub Repository" %><br>
+    <%= f.text_field :github %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

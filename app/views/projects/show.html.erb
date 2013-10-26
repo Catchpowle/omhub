@@ -4,6 +4,14 @@
   <strong>Description:</strong>
   <%= @project.description %>
 </p>
+<p>
+  <strong>Project URL:</strong>
+  <%= @project.url %>
+</p>
+<p>
+  <strong>GitHub Repository:</strong>
+  <%= @project.github %>
+</p>
 <% if @project.user == current_user %>
 	<%= link_to 'Edit', edit_project_path(@project) %> |
 <% end %>
