@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
   # GET /projects
   # GET /projects.json
   def index
@@ -14,7 +15,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/new
   def new
-    @project = Project.new
+    @project = current_user.projects.build
   end
 
   # GET /projects/1/edit
@@ -24,7 +25,7 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
-    @project = Project.new(project_params)
+    @project = current_user.projects.build(project_params)
 
     respond_to do |format|
       if @project.save
@@ -65,6 +66,11 @@ class ProjectsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
+    end
+
+    def correct_user
+      @project = current_user.projects.find_by(id: params[:id])
+      redirect_to projects_path, notice: "Not authorized to edit this pin" if @project.nil?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
