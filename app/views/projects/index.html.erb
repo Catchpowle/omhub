@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Name</th>
       <th>Description</th>
       <th>User</th>
       <th></th>
@@ -14,8 +15,9 @@
   <tbody>
     <% @projects.each do |project| %>
       <tr>
+        <td><%= project.name %></td>
         <td><%= project.description %></td>
-        <td><%= project.user.email if project.user %></td>
+        <td><%= project.user.name if project.user %></td>
         <td><%= link_to 'Show', project %></td>
         <% if project.user == current_user %>
           <td><%= link_to 'Edit', edit_project_path(project) %></td>
