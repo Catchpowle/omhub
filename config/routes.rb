@@ -1,7 +1,9 @@
 Odyss::Application.routes.draw do
+  get '/auth/:provider/callback' => 'authentications#create'
+  resources :authentications
   resources :projects
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => 'registrations' }
   root "pages#home"
   get "about" => "pages#about" # creates about_path
   
