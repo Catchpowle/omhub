@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '1.9.3'
  # Dude, Jon. Your gemfile is neat as hell. Like, organized neat.
 gem 'rails', '4.0.0'
 gem 'sass-rails', '~> 4.0.0'
