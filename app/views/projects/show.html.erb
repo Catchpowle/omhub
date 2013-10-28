@@ -2,8 +2,9 @@
   <%= javascript_include_tag :defaults %>
 </head>
 
-<p id="notice"><%= notice %></p>
-<%= image_tag @project.image.url %>
+<%= render 'carousel' %>
+
+
 <p>
   <strong>Project Name:</strong>
   <%= @project.name %>
