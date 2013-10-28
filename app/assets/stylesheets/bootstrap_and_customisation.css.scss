@@ -17,3 +17,20 @@ $jumbotron-bg: white;
 .navbar-brand {
      font-weight: bold;
 }
+
+.btn-linkedin {
+  background-color: hsl(201, 100%, 21%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00527f", endColorstr="#00456b");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#00527f), to(#00456b));
+  background-image: -moz-linear-gradient(top, #00527f, #00456b);
+  background-image: -ms-linear-gradient(top, #00527f, #00456b);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00527f), color-stop(100%, #00456b));
+  background-image: -webkit-linear-gradient(top, #00527f, #00456b);
+  background-image: -o-linear-gradient(top, #00527f, #00456b);
+  background-image: linear-gradient(#00527f, #00456b);
+  border-color: #00456b #00456b hsl(201, 100%, 20%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.06);
+  -webkit-font-smoothing: antialiased;
+}
