@@ -12,6 +12,11 @@ gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 gem "devise", "~> 3.1.1"
 gem 'paperclip', '~> 3.0'
 
+# OAuth stuff
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem "nifty-generators", :group => :development
+
 group :development, :test do
      gem 'sqlite3'
 end
@@ -37,3 +42,5 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem "mocha", group: :test
