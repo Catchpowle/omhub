@@ -1,8 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,200);
 
 $body-bg: #ecf0f1;
-$font-family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$navbar-height: 45px;
+$font-family-sans-serif: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height: 70px;
 $navbar-default-bg: white;
 $navbar-default-brand-color: #c0392b;
 $brand-primary: #c0392b;
@@ -15,7 +15,8 @@ $jumbotron-bg: white;
 }
 
 .navbar-brand {
-     font-weight: bold;
+     font-weight: lighter;
+     font-size: 50px;
 }
 
 /** for project index views **/
@@ -30,4 +31,13 @@ $jumbotron-bg: white;
 
 .box img {
   width: 100%;
+}
+.jumbotron {
+	background: url(http://i1352.photobucket.com/albums/q655/eanplatter/padded_zps75074b7b.png?t=1383002982);
+	background-repeat: repeat;
+	color: white;
+}
+
+h1 {
+	font-weight: lighter;
 }
