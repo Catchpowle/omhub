@@ -2,36 +2,46 @@
       http://twitter.github.com/bootstrap/javascript.html#carousel -->
 <div id="this-carousel-id" class="carousel slide" style="width: 600px; margin: 0 auto"><!-- class of slide for animation -->
   <div class="carousel-inner">
-    <div class="item active"><!-- class of active since it's the first item -->
-      <%= image_tag @project.image.url %>
-      <div class="carousel-caption">
-        <p><%= @project.caption %></p>
+    <% if @project.image.present? %>
+      <div class="item active"><!-- class of active since it's the first item -->
+        <%= image_tag @project.image.url %>
+        <div class="carousel-caption">
+          <p><%= @project.caption %></p>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <%= image_tag @project.image2.url %>
-      <div class="carousel-caption">
-        <p><%= @project.caption2 %></p>
-      </div>
-    </div>
-    <div class="item">
-      <%= image_tag @project.image3.url %>
-      <div class="carousel-caption">
-        <p><%= @project.caption3 %></p>
-      </div>
-    </div>
-    <div class="item">
-      <%= image_tag @project.image4.url %>
-      <div class="carousel-caption">
-        <p><%= @project.caption4 %></p>
-      </div>
-    </div>
-    <div class="item">
-      <%= image_tag @project.image5.url %>
-      <div class="carousel-caption">
-        <p><%= @project.caption5 %></p>
-      </div>
-    </div>
+      <% if @project.image2.present? %>
+        <div class="item">
+          <%= image_tag @project.image2.url %>
+          <div class="carousel-caption">
+            <p><%= @project.caption2 %></p>
+          </div>
+        </div>
+        <% if @project.image3.present? %>
+          <div class="item">
+            <%= image_tag @project.image3.url %>
+            <div class="carousel-caption">
+              <p><%= @project.caption3 %></p>
+            </div>
+          </div>
+          <% if @project.image4.present? %>
+            <div class="item">
+              <%= image_tag @project.image4.url %>
+              <div class="carousel-caption">
+                <p><%= @project.caption4 %></p>
+              </div>
+            </div>
+            <% if @project.image5.present? %>
+              <div class="item">
+                <%= image_tag @project.image5.url %>
+                <div class="carousel-caption">
+                  <p><%= @project.caption5 %></p>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
   </div><!-- /.carousel-inner -->
   <!--  Next and Previous controls below
         href values must reference the id for this carousel -->

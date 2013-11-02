@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :projects
+  accepts_nested_attributes_for :projects
 
   validates :name, presence: true
   def apply_omniauth(omniauth)
