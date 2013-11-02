@@ -1,12 +1,16 @@
 <h1><%= @user.name %></h1>
+<%= image_tag @user.photo.url(:profile) %>
 
 <% for project in @user.projects %>
   <div class="box">
-  		<%= link_to image_tag(project.image.url(:medium)), project_path(project) %>
-      <%= project.description %>
-      <% if project.user == current_user %>
-        <%= link_to 'Edit', edit_project_path(project) %>
-        <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %>
-      <% end %>
-      </div>
+		<%= link_to image_tag(project.image.url(:medium)), project_path(project) %>
+    <%= project.description %>
+    <% if project.user == current_user %>
+      <%= link_to 'Edit', edit_project_path(project) %>
+      <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+	</div>
+
+	
 <% end %>
+

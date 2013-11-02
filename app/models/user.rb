@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 	has_many :authentications
+  has_attached_file :photo, :styles => { :medium => "300x300>", :thumb => "100x100>", :profile => "200x200>" }
+
 
 	def password_required?
   		(authentications.empty? || !password.blank?) && super
@@ -10,7 +12,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :projects
-  accepts_nested_attributes_for :projects
 
   validates :name, presence: true
   def apply_omniauth(omniauth)
