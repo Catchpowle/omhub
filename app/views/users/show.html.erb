@@ -1,6 +1,16 @@
 <h1><%= @user.name %></h1>
 <%= image_tag @user.photo.url(:profile) %>
 
+<p>
+  <strong>Bio:</strong>
+  <%= @user.bio %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @user.url %>
+</p>
+
 <% for project in @user.projects %>
   <div class="box">
 		<%= link_to image_tag(project.image.url(:medium)), project_path(project) %>

@@ -21,6 +21,16 @@
           <%= f.label :photo %>
           <%= f.file_field :photo, class: "form-control" %>
       </div>
+
+      <div class="form-group">
+          <%= f.label :bio %>
+          <%= f.text_area :bio, class: "form-control", :autofocus => true %>
+      </div>
+
+      <div class="form-group">
+          <%= f.label :url %>
+          <%= f.text_field :url, class: "form-control", :autofocus => true %>
+      </div>
       
 <% if @user.password_required? %>
       <div class="form-group">
