@@ -6,20 +6,16 @@
 
 
 <p>
-  <strong>Project Name:</strong>
   <%= @project.name %>
 </p>
 <p>
-  <strong>Description:</strong>
   <%= @project.description %>
 </p>
 <p>
-  <strong>Project URL:</strong>
-  <%= @project.url %>
+  <%= link_to "Launch Site", @project.url, class: "btn btn-default btn-lg" %>
 </p>
 <p>
-  <strong>GitHub Repository:</strong>
-  <%= @project.github %>
+  <%= link_to "Check it out on Github", @project.github, class: "btn btn-success btn-lg" %>
 </p>
 <% if @project.user == current_user %>
 	<%= link_to 'Edit', edit_project_path(@project) %> |
