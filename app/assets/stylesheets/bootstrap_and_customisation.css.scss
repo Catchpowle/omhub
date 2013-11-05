@@ -4,8 +4,8 @@ $body-bg: #ecf0f1;
 $font-family-sans-serif: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height: 70px;
 $navbar-default-bg: white;
-$navbar-default-brand-color: #c0392b;
-$brand-primary: #c0392b;
+$navbar-default-brand-color: magenta;
+$brand-primary: magenta;
 $jumbotron-bg: white;
 
 @import 'bootstrap';
@@ -41,3 +41,32 @@ $jumbotron-bg: white;
 h1 {
 	font-weight: lighter;
 }
+
+.profile {
+  margin: 5px;
+  width: 300px;
+  background: linear-gradient(left , rgba(149, 149, 149, 0.6) 58% , rgba(211, 211, 211, 0.580392) 96%);
+  background: -o-linear-gradient(left , rgba(149, 149, 149, 0.6) 58% , rgba(211, 211, 211, 0.580392) 96%);
+  background: -ms-linear-gradient(left , rgba(149, 149, 149, 0.6) 58% , rgba(211, 211, 211, 0.580392) 96%);
+  background: -moz-linear-gradient(left , rgba(149, 149, 149, 0.6) 58% , rgba(211, 211, 211, 0.580392) 96%);
+  background: -webkit-linear-gradient(left , rgba(149, 149, 149, 0.6) 58% , rgba(211, 211, 211, 0.580392) 96%);
+  border-radius: 0px;
+  clear: both;
+  float: left;
+}
+
+.imager img {
+  width: 50%;
+  border-radius: 100%
+}
+
+
+.panel {
+  background: transparent;
+  border-radius: 0px;
+}
+
+.projects {
+  float: right;
+}
+
