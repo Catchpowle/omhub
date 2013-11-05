@@ -11,9 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name, "Project Name" %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :url, "Project URL" %><br>
+    <%= f.text_field :url, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :github, "GitHub" %><br>
+    <%= f.text_field :github, class: "form-control" %>
   </div>
 
   <div class="form-group">
@@ -21,9 +36,9 @@
     <%= f.file_field :image, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :caption, "Add caption" %><br>
-    <%= f.text_area :caption %>
+    <%= f.text_area :caption, class: "form-control" %>
   </div>
 
   <div class="form-group">
@@ -31,9 +46,9 @@
     <%= f.file_field :image2, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :caption2, "Add caption" %><br>
-    <%= f.text_area :caption2 %>
+    <%= f.text_area :caption2, class: "form-control" %>
   </div>
 
   <div class="form-group">
@@ -41,9 +56,9 @@
     <%= f.file_field :image3, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :caption3, "Add caption" %><br>
-    <%= f.text_area :caption3 %>
+    <%= f.text_area :caption3, class: "form-control" %>
   </div>
 
   <div class="form-group">
@@ -51,9 +66,9 @@
     <%= f.file_field :image4, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :caption4, "Add caption" %><br>
-    <%= f.text_area :caption4 %>
+    <%= f.text_area :caption4, class: "form-control" %>
   </div>
 
   <div class="form-group">
@@ -61,27 +76,12 @@
     <%= f.file_field :image5, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :caption5, "Add caption" %><br>
-    <%= f.text_area :caption5 %>
+    <%= f.text_area :caption5, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= f.label :url, "Project URL" %><br>
-    <%= f.text_field :url %>
-  </div>
-
-  <div class="field">
-    <%= f.label :github, "GitHub" %><br>
-    <%= f.text_field :github %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>
