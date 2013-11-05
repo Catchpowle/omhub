@@ -1,16 +1,23 @@
-<div class="center">
-<div class="profile">
-<h1><%= @user.name %></h1>
-<%= image_tag @user.photo.url(:profile) %>
+<div class="row center">
+  <div class ="col-md-5">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">
+        <h1><%= @user.name %></h1> 
+        <p class="imager">
+          <%= image_tag @user.photo.url(:medium) %>
+        </p>
+      </div>
+      <div class="panel-body">
+        <p><%= @user.bio %></p>
+      </div>
 
-<p>
-  <%= @user.bio %>
-</p>
-
-<p>
-  <%= link_to "Website", @user.url, class: 'btn btn-lg btn-default' %>
-</p>
-</div>
+      <!-- List group -->
+      <ul class="list-group">
+        <li class="list-group-item"><p><%= link_to "Website", @user.url, class: 'btn btn-lg btn-info' %>
+      </ul>
+    </div>
+  </div>
 <div>
 <% for project in @user.projects %>
   <div class="box projects">
