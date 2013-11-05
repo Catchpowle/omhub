@@ -1,18 +1,19 @@
+<div class="center">
+<div class="profile">
 <h1><%= @user.name %></h1>
 <%= image_tag @user.photo.url(:profile) %>
 
 <p>
-  <strong>Bio:</strong>
   <%= @user.bio %>
 </p>
 
 <p>
-  <strong>Website:</strong>
-  <%= @user.url %>
+  <%= link_to "Website", @user.url, class: 'btn btn-lg btn-default' %>
 </p>
-
+</div>
+<div>
 <% for project in @user.projects %>
-  <div class="box">
+  <div class="box projects">
 		<%= link_to image_tag(project.image.url(:medium)), project_path(project) %>
     <%= project.description %>
     <% if project.user == current_user %>
@@ -20,7 +21,24 @@
       <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
 	</div>
-
+</div>
 	
 <% end %>
 
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'omhub'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>

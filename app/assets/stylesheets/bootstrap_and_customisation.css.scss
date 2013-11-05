@@ -41,3 +41,26 @@ $jumbotron-bg: white;
 h1 {
 	font-weight: lighter;
 }
+
+.profile {
+  margin: 5px;
+  width: 300px;
+  background: linear-gradient(left , rgba(149, 149, 149, 0.6) 58% , rgba(211, 211, 211, 0.580392) 96%);
+  background: -o-linear-gradient(left , rgba(149, 149, 149, 0.6) 58% , rgba(211, 211, 211, 0.580392) 96%);
+  background: -ms-linear-gradient(left , rgba(149, 149, 149, 0.6) 58% , rgba(211, 211, 211, 0.580392) 96%);
+  background: -moz-linear-gradient(left , rgba(149, 149, 149, 0.6) 58% , rgba(211, 211, 211, 0.580392) 96%);
+  background: -webkit-linear-gradient(left , rgba(149, 149, 149, 0.6) 58% , rgba(211, 211, 211, 0.580392) 96%);
+  padding: 10px;
+  border-radius: 7px;
+  clear: both;
+  float: left;
+}
+
+.profile img {
+  width: 100%;
+  border-radius: 100%
+}
+
+.projects {
+  float: right;
+}
