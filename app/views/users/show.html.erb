@@ -1,5 +1,5 @@
-<div class="row center">
-  <div class ="col-md-5">
+<div class="row">
+  <div class ="col-md-3 center">
     <div class="panel panel-default">
       <!-- Default panel contents -->
       <div class="panel-heading">
@@ -13,11 +13,11 @@
       </div>
 
       <!-- List group -->
-      <ul class="list-group">
-        <li class="list-group-item"><p><%= link_to "Website", @user.url, class: 'btn btn-lg btn-info' %>
-      </ul>
+        <ul class="list-group">
+          <li class="list-group-item"><p><%= link_to "Website", @user.url, class: 'btn btn-lg btn-info' %>
+        </ul>
+      </div>
     </div>
-  </div>
 <div>
 <% for project in @user.projects %>
   <div class="box projects">

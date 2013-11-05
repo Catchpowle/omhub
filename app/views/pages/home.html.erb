@@ -9,17 +9,11 @@
     		or
     	</p>	
      	<p>
-     		<%= link_to "Browse Projects", projects_path, class: "btn btn-danger btn-lg" %>
+     		<%= link_to "Browse Projects", projects_path, class: "btn btn-primary btn-lg" %>
      	</p>
     <% else %>
-     	<p>
-       <%= link_to "Log in with Twitter", '/auth/twitter', class: "btn btn-info btn-lg" %>
-      </p>
       <p>
-        or
-      </p>
-      <p>
-       <%= link_to "Create new Account", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+       <%= link_to "Create new Account", new_user_registration_path, class: "btn btn-primary btn-lg" %> or <%= link_to "Sign In", new_user_session_path, class: "btn btn-lg btn-primary" %>
   		</p>
   	<% end %>
 </div>
