@@ -14,24 +14,20 @@
 
       <!-- List group -->
         <ul class="list-group">
-          <li class="list-group-item"><p><%= link_to "Website", @user.url, class: 'btn btn-lg btn-info' %>
+          <li class="list-group-item"><p><%= link_to "Website", @user.url, class: 'btn btn-lg btn-primary' %>
         </ul>
       </div>
     </div>
-<div>
+<div class="panel panel-default col-md-9 center">
 <% for project in @user.projects %>
-  <div class="box projects">
+  <div class="box panel-body garble">
 		<%= link_to image_tag(project.image.url(:medium)), project_path(project) %>
-    <%= project.description %>
-    <% if project.user == current_user %>
-      <%= link_to 'Edit', edit_project_path(project) %>
-      <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %>
-    <% end %>
+    <%= project.name %>
 	</div>
-</div>
+
 	
 <% end %>
-
+</div>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
