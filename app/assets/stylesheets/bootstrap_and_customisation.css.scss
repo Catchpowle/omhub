@@ -4,12 +4,25 @@ $body-bg: #ecf0f1;
 $font-family-sans-serif: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height: 70px;
 $navbar-default-bg: white;
-$navbar-default-brand-color: magenta;
-$brand-primary: magenta;
+$navbar-default-brand-color: #8e44ad;
+$brand-primary: white;
 $jumbotron-bg: white;
 
 @import 'bootstrap';
 
+.btn-primary{
+  color: #f39c12;
+  border-color: #f39c12;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  color: white;
+  background-color: #f39c12;
+  border-color: #f39c12;
+}
 .center {
      text-align: center;
 }
@@ -17,6 +30,12 @@ $jumbotron-bg: white;
 .navbar-brand {
      font-weight: lighter;
      font-size: 50px;
+}
+
+.navbar .nav > li > a {
+  &.nav-links {
+    color: #8e44ad;
+  }
 }
 
 /** for project index views **/
@@ -33,9 +52,9 @@ $jumbotron-bg: white;
   width: 100%;
 }
 .jumbotron {
-	background: url(http://i1352.photobucket.com/albums/q655/eanplatter/padded_zps75074b7b.png?t=1383002982);
+	background: white;
 	background-repeat: repeat;
-	color: white;
+	color: #8e44ad;
 }
 
 h1 {
@@ -69,4 +88,6 @@ h1 {
 .projects {
   float: right;
 }
+
+
 
