@@ -2,25 +2,39 @@
   <%= javascript_include_tag :defaults %>
 </head>
 
-<%= render 'carousel' %>
+<div class = "row">
+  <div class = "col-md-offset-10 col-md-3">
+    <% if @project.user == current_user %>
+      <p><%= link_to 'Edit', edit_project_path(@project), class: "btn btn-default btn" %>
+      <%= link_to 'Delete Project', @project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn" %></p>
+    <% end %>
+  </div>
+</div>
 
+<div class="row">
+  <div class ="col-md-5">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">
+        <h1><%= @project.name %></h1> 
+        posted by <%= @project.user.name %>
+      </div>
+      <div class="panel-body">
+        <p><%= @project.description %></p>
+      </div>
 
-<p>
-  <%= @project.name %>
-</p>
-<p>
-  <%= @project.description %>
-</p>
-<p>
-  <%= link_to "Launch Site", @project.url, class: "btn btn-default btn-lg" %>
-</p>
-<p>
-  <%= link_to "Check it out on Github", @project.github, class: "btn btn-success btn-lg" %>
-</p>
-<% if @project.user == current_user %>
-	<%= link_to 'Edit', edit_project_path(@project) %> |
-<% end %>
-<%= link_to 'Back', projects_path %>
+      <!-- List group -->
+      <ul class="list-group">
+        <li class="list-group-item"><p><%= link_to "Launch Site", @project.url, class: "btn btn-default btn-lg" %>
+          <%= link_to "Check it out on Github", @project.github, class: "btn btn-info btn-lg" %></p></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class = "col-md-7">
+  <%= render 'carousel' %>
+  </div>
+</div>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">

@@ -24,9 +24,10 @@
       <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "About", about_path %></li>
       <% if user_signed_in? %>
-          <!-- <li><%= link_to "User Profile", users_show_path %></li> -->
+          
           <!--<li><%= link_to "Account Settings", edit_user_registration_path %></li> -->
           <li><%= link_to 'New Project', new_project_path %></li>
+          <li><%= link_to "Profile", current_user %></li>
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to "Sign in", new_user_session_path %></li>
