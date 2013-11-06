@@ -25,8 +25,16 @@
 
       <!-- List group -->
       <ul class="list-group">
-        <li class="list-group-item"><p><%= link_to "Launch Site", @project.url, class: "btn btn-info btn-lg" %>
-          <%= link_to "Check it out on Github", @project.github, class: "btn btn-info btn-lg" %></p></li>
+        <% if @project.url.present? || @project.github.present? %>
+          <li class="list-group-item"><p>
+            <% if @project.url.present? %>
+              <%= link_to "Launch Site", @project.url, class: "btn btn-info btn-lg" %>
+            <% end %>
+            <% if @project.github.present? %>
+              <%= link_to "Check it out on Github", @project.github, class: "btn btn-info btn-lg" %>
+            <% end %>
+          </p></li>
+        <% end %>
       </ul>
     </div>
   </div>

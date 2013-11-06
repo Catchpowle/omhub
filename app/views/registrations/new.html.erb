@@ -8,38 +8,39 @@
       <%= devise_error_messages! %>
 
       <div class="form-group">
-        <%= f.label :name %>
+        <%= f.label :name, "Name:" %>
         <%= f.text_field :name, autofocus: true, class: "form-control" %>
       </div>
 
       <div class="form-group">
-        <%= f.label :email %>
+        <%= f.label :email, "Email:" %>
         <%= f.email_field :email, autofocus: true, class: "form-control" %>
       </div>
 
       <div class="form-group">
-          <%= f.label :photo %>
+          <%= f.label :photo, "Display Picture:" %>
           <%= f.file_field :photo, class: "form-control" %>
       </div>
 
       <div class="form-group">
-          <%= f.label :bio %>
+          <%= f.label :bio, "Bio:" %>
           <%= f.text_area :bio, class: "form-control", :autofocus => true %>
       </div>
 
       <div class="form-group">
-          <%= f.label :url %>
+          <%= f.label :url, "Personal Website:" %>
           <%= f.text_field :url, class: "form-control", :autofocus => true %>
+          <span class="help-block">Format: https://example.com</span>
       </div>
       
 <% if @user.password_required? %>
       <div class="form-group">
-        <%= f.label :password %>
+        <%= f.label :password, "Password:" %>
         <%= f.password_field :password, class: "form-control" %>
       </div>
 
       <div class="form-group">
-        <%= f.label :password_confirmation %>
+        <%= f.label :password_confirmation, "Confirm Password:" %>
         <%= f.password_field :password_confirmation, class: "form-control" %>
       </div>
 
@@ -50,7 +51,5 @@
     <% end %>
   </div>
 
-  <div class="panel-footer">
-    <%= render "devise/shared/links" %>
-  </div>
+  
 </div>

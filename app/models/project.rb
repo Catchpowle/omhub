@@ -6,6 +6,6 @@ class Project < ActiveRecord::Base
 	has_attached_file :image4, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 	has_attached_file :image5, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 
-	validates :name, :description, :url, :github, presence: true
+	validates :name, :description, presence: true
 
 end

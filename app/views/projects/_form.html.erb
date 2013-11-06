@@ -32,11 +32,13 @@
       <li class="list-group-item"><div class="form-group">
         <%= f.label :url, "URL:" %><br>
         <%= f.text_field :url, class: "form-control" %>
+        <span class="help-block">Format: https://example.com</span>
       </div></li>
-
+      
       <li class="list-group-item"><div class="field">
         <%= f.label :github, "GitHub:" %><br>
         <%= f.text_field :github, class: "form-control" %>
+        <span class="help-block">Format: https://github.com/user/repository</span>
       </div></li>
     </ul>
   </div>
