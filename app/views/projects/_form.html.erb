@@ -11,77 +11,109 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= f.label :name, "Project Name" %><br>
-    <%= f.text_field :name, class: "form-control" %>
+  <div class="panel panel-default">
+
+    <div class="panel-heading">
+      <h1>Add Project Details</h1>
+    </div>
+
+    <ul class="list-group">
+
+      <li class="list-group-item"><div class="form-group">
+        <%= f.label :name, "Name:" %><br>
+        <%= f.text_field :name, class: "form-control" %>
+      </div></li>
+
+      <li class="list-group-item"><div class="form-group">
+        <%= f.label :description, "Description:" %>
+        <%= f.text_area :description, class: "form-control" %>
+      </div></li>
+
+      <li class="list-group-item"><div class="form-group">
+        <%= f.label :url, "URL:" %><br>
+        <%= f.text_field :url, class: "form-control" %>
+      </div></li>
+
+      <li class="list-group-item"><div class="field">
+        <%= f.label :github, "GitHub:" %><br>
+        <%= f.text_field :github, class: "form-control" %>
+      </div></li>
+    </ul>
   </div>
 
-  <div class="form-group">
-    <%= f.label :description %>
-    <%= f.text_area :description, class: "form-control" %>
-  </div>
 
-  <div class="form-group">
-    <%= f.label :url, "Project URL" %><br>
-    <%= f.text_field :url, class: "form-control" %>
-  </div>
+  <div class="panel panel-default">
 
-  <div class="field">
-    <%= f.label :github, "GitHub" %><br>
-    <%= f.text_field :github, class: "form-control" %>
-  </div>
+    <div class="panel-heading">
+      <h1>Add Up To Five Optional Images And Captions</h1>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :image, "Add image" %>
-    <%= f.file_field :image, class: "form-control" %>
-  </div>
+    <ul class="list-group">
 
-  <div class="form-group">
-    <%= f.label :caption, "Add caption" %><br>
-    <%= f.text_area :caption, class: "form-control" %>
-  </div>
 
-  <div class="form-group">
-    <%= f.label :image2, "Add image" %>
-    <%= f.file_field :image2, class: "form-control" %>
-  </div>
 
-  <div class="form-group">
-    <%= f.label :caption2, "Add caption" %><br>
-    <%= f.text_area :caption2, class: "form-control" %>
-  </div>
+      <li class="list-group-item">
+        <%= f.label :image, "1." %>
+        <div class="form-group">
+          <%= f.file_field :image, class: "form-control" %>
+        </div>
 
-  <div class="form-group">
-    <%= f.label :image3, "Add image" %>
-    <%= f.file_field :image3, class: "form-control" %>
-  </div>
+        <div class="form-group">
+          <%= f.text_area :caption, class: "form-control" %>
+        </div>
+      </li>
 
-  <div class="form-group">
-    <%= f.label :caption3, "Add caption" %><br>
-    <%= f.text_area :caption3, class: "form-control" %>
-  </div>
+      <li class="list-group-item">
+        <%= f.label :image2, "2." %>
+        <div class="form-group">
+          <%= f.file_field :image2, class: "form-control" %>
+        </div>
 
-  <div class="form-group">
-    <%= f.label :image4, "Add image" %>
-    <%= f.file_field :image4, class: "form-control" %>
-  </div>
+        <div class="form-group">
+          <%= f.text_area :caption2, class: "form-control" %>
+        </div>
+      </li>
 
-  <div class="form-group">
-    <%= f.label :caption4, "Add caption" %><br>
-    <%= f.text_area :caption4, class: "form-control" %>
-  </div>
+      <li class="list-group-item">
+        <%= f.label :image3, "3." %>
 
-  <div class="form-group">
-    <%= f.label :image5, "Add image" %>
-    <%= f.file_field :image5, class: "form-control" %>
-  </div>
+        <div class="form-group">
+          <%= f.file_field :image3, class: "form-control" %>
+        </div>
 
-  <div class="form-group">
-    <%= f.label :caption5, "Add caption" %><br>
-    <%= f.text_area :caption5, class: "form-control" %>
+        <div class="form-group">
+          <%= f.text_area :caption3, class: "form-control" %>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <%= f.label :image4, "4." %>
+
+        <div class="form-group">
+          <%= f.file_field :image4, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.text_area :caption4, class: "form-control" %>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+      <%= f.label :image5, "5." %>
+
+      <div class="form-group">
+        <%= f.file_field :image5, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.text_area :caption5, class: "form-control" %>
+      </div></li>
+
+    </ul>
   </div>
 
   <div class="form-group">
     <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>
+
