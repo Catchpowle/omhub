@@ -5,7 +5,7 @@
 <div class = "row">
   <div class = "col-md-offset-10 col-md-3">
     <% if @project.user == current_user %>
-      <p><%= link_to 'Edit', edit_project_path(@project), class: "btn btn-default btn" %>
+      <p><%= link_to 'Edit', edit_project_path(@project), class: "btn btn-success btn" %>
       <%= link_to 'Delete Project', @project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn" %></p>
     <% end %>
   </div>
@@ -25,8 +25,8 @@
 
       <!-- List group -->
       <ul class="list-group">
-        <li class="list-group-item"><p><%= link_to "Launch Site", @project.url, class: "btn btn-primary btn-lg" %>
-          <%= link_to "Check it out on Github", @project.github, class: "btn btn-primary btn-lg" %></p></li>
+        <li class="list-group-item"><p><%= link_to "Launch Site", @project.url, class: "btn btn-info btn-lg" %>
+          <%= link_to "Check it out on Github", @project.github, class: "btn btn-info btn-lg" %></p></li>
       </ul>
     </div>
   </div>

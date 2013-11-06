@@ -5,24 +5,56 @@ $font-family-sans-serif: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-ser
 $navbar-height: 70px;
 $navbar-default-bg: white;
 $navbar-default-brand-color: #8e44ad;
-$brand-primary: white;
+$brand-primary: #8e44ad;
+$brand-info: white;
+$brand-success: white;
+$brand-danger: white;
 $jumbotron-bg: white;
 
 @import 'bootstrap';
 
-.btn-primary{
+.btn-info{
   color: #f39c12;
   border-color: #f39c12;
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active {
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active {
   color: white;
   background-color: #f39c12;
   border-color: #f39c12;
 }
+
+.btn-success{
+  color: #2cc16a;
+  border-color: #2cc16a;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active {
+  color: white;
+  background-color: #2cc16a;
+  border-color: #2cc16a;
+}
+
+.btn-danger{
+  color: #c0392b;
+  border-color: #c0392b;
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active {
+  color: white;
+  background-color: #c0392b;
+  border-color: #c0392b;
+}
+
 .center {
      text-align: center;
 }
@@ -59,6 +91,10 @@ $jumbotron-bg: white;
 
 h1 {
 	font-weight: lighter;
+}
+
+h2 {
+  font-weight: lighter;
 }
 
 .profile {
