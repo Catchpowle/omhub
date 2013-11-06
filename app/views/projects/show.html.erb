@@ -17,7 +17,7 @@
       <!-- Default panel contents -->
       <div class="panel-heading">
         <h1><%= @project.name %></h1> 
-        posted by <%= @project.user.name %>
+        posted by <%= link_to @project.user.name, user_path(@project.user) %>
       </div>
       <div class="panel-body">
         <p><%= @project.description %></p>

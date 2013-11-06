@@ -8,7 +8,7 @@ Odyss::Application.routes.draw do
   # resources :users
 
   get 'users/:id' => 'users#show', as: :user
-  root "pages#home"
+  root "projects#index"
   get "about" => "pages#about" # creates about_path
   
   # The priority is based upon order of creation: first created -> highest priority.
